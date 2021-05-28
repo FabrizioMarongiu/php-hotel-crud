@@ -1,6 +1,6 @@
 <!-- INCLUSIONE DATABASE CON QUERY STRING-->
 <?php
-    include_once __DIR__.'/partials/get-single-rooms.php';
+    include __DIR__.'/get-single-room.php';
 ?>
 
 
@@ -15,15 +15,21 @@
 </head>
 <body>
     <main>
+    <?php if(!empty($dettaglio_stanza)){?>
         <ul>
-            <li><h1>Numero stanza: </h1></li>
-            <li>Piano: </li>
-            <li>Letti: </li>
+            <li><h1>Numero stanza: <?php echo $dettaglio_stanza['room_number']?></h1></li>
+            <li>Piano: <?php echo $dettaglio_stanza['floor']?></li>
+            <li>Letti: <?php echo $dettaglio_stanza['beds']?></li>
             <li>
                 <a href="../index.php">Back</a>
             </li>
 
         </ul>
+
+    <?php } else{ ?>
+        <h2>Nessuna stanza trovata</h2>
+    <?php } ?>
+        
     </main>
 </body>
 </html>

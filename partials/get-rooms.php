@@ -1,6 +1,6 @@
 <?php
 
-    require_once __DIR__.'/database.php';
+    include __DIR__.'/database.php';
 
     // ottengo i dati delle stanze
     $sql = "SELECT `id`,`room_number`  FROM `stanze`";

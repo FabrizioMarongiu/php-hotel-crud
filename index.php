@@ -1,6 +1,6 @@
 <!-- INCLUSIONE DEL TEMPLATE DATABASE -->
 <?php
-    include_once __DIR__.'/partials/get-rooms.php';
+    include __DIR__.'/partials/get-rooms.php';
 ?>
 
 
